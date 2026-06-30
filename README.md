@@ -42,22 +42,22 @@ https://insideairbnb.com/get-the-data/
 
 ## Key Findings
 
-**City Pricing**
+**City Pricing:**
 Dallas commands the highest average nightly price ($264), followed by Austin ($197) and Fort Worth ($141), the most affordable of the three markets.
 
-**Room Type**
+**Room Type:**
 Entire homes/apartments dominate the market (79-87% of listings across all cities) and consistently outperform other room types in pricing power, except in Austin where hotel rooms ($289) edge out entire homes ($213).
 
-**Location**
+**Location:**
 Austin contains the single most expensive area in Texas. Zip code 78730 averages $510/night, nearly $200 more than Dallas's priciest district. Fort Worth has no neighbourhoods in the statewide top 10, confirming it as the most budget-friendly option for travelers and the least competitive market for premium listings.
 
-**Minimum Stay Requirements**
+**Minimum Stay Requirements:**
 Listings with a 2-6 night minimum command the highest nightly rate ($247), suggesting this is the sweet spot for traveler demand. Price steadily declines as minimum stay increases, indicating hosts trade nightly rate for booking stability on longer stays.
 
-**Host Listing Count**
+**Host Listing Count:**
 Hosts with only one listing charge the highest average price ($229), while hosts with 2-5 listings charge the least ($199). However the spread across all host types is narrow ($30), making this a weaker pricing factor than room type or location.
 
-**Availability**
+**Availability:**
 Listing availability does not meaningfully change with price. The average days available stays consistent (230-270 days) across both budget and premium listings in every city.
 
 
