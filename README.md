@@ -6,16 +6,17 @@
 
 ## Tools Used
 
-- **Python (pandas)** — data cleaning, null handling, outlier removal, and consolidating all three city datasets into one unified table
-- **PostgreSQL** — hosted the cleaned dataset and ran the SQL analysis, using CTEs, window functions, and CASE WHEN logic to answer the business question
-- **Power BI Desktop** — built an interactive dashboard with a city filter, price-tier filter, and a geographic map visual to communicate findings
-- **VS Code (Jupyter Notebooks)** — used for EDA and the cleaning pipeline
-- **pgAdmin 4** — used to manage the PostgreSQL database and run/test SQL queries
-- **Git/GitHub** — version control and project hosting
+- **Python (pandas):** data cleaning, null handling, outlier removal, and consolidating all three city datasets into one unified table
+- **PostgreSQL:** hosted the cleaned dataset and ran the SQL analysis, using CTEs, window functions, and CASE WHEN logic to answer the business question
+- **Power BI Desktop:** built an interactive dashboard with a city filter, price-tier filter, and a geographic map visual to communicate findings
+- **VS Code (Jupyter Notebooks):** used for EDA and the cleaning pipeline
+- **pgAdmin 4:** used to manage the PostgreSQL database and run/test SQL queries
+- **Git/GitHub:** version control and project hosting
 
 
 ## Project Structure
 
+```
 texas-airbnb-analysis/
 ├── notebooks/
 │   ├── data_exploration.ipynb    # EDA across all 3 cities
@@ -23,9 +24,15 @@ texas-airbnb-analysis/
 ├── sql/
 │   └── analysis.sql              # 10 SQL queries answering the business question
 ├── dashboard/
-│   └── texas_airbnb_dashboard.pbix  # Power BI dashboard
+│   ├── texas_airbnb_dashboard.pbix   # Power BI dashboard
+│   └── screenshots/
+│       ├── dashboard_all.png
+│       ├── dashboard_austin.png
+│       ├── dashboard_dallas.png
+│       └── dashboard_fort_worth.png
 ├── README.md
 └── .gitignore
+```
 
 
 ## Data Source
@@ -42,7 +49,7 @@ Dallas commands the highest average nightly price ($264), followed by Austin ($1
 Entire homes/apartments dominate the market (79-87% of listings across all cities) and consistently outperform other room types in pricing power, except in Austin where hotel rooms ($289) edge out entire homes ($213).
 
 **Location**
-Austin contains the single most expensive area in Texas — zip code 78730 averages $510/night, nearly $200 more than Dallas's priciest district. Fort Worth has no neighbourhoods in the statewide top 10, confirming it as the most budget-friendly option for travelers and the least competitive market for premium listings.
+Austin contains the single most expensive area in Texas. Zip code 78730 averages $510/night, nearly $200 more than Dallas's priciest district. Fort Worth has no neighbourhoods in the statewide top 10, confirming it as the most budget-friendly option for travelers and the least competitive market for premium listings.
 
 **Minimum Stay Requirements**
 Listings with a 2-6 night minimum command the highest nightly rate ($247), suggesting this is the sweet spot for traveler demand. Price steadily declines as minimum stay increases, indicating hosts trade nightly rate for booking stability on longer stays.
@@ -51,7 +58,7 @@ Listings with a 2-6 night minimum command the highest nightly rate ($247), sugge
 Hosts with only one listing charge the highest average price ($229), while hosts with 2-5 listings charge the least ($199). However the spread across all host types is narrow ($30), making this a weaker pricing factor than room type or location.
 
 **Availability**
-Listing availability does not meaningfully change with price — average days available stays consistent (230-270 days) across both budget and premium listings in every city.
+Listing availability does not meaningfully change with price. The average days available stays consistent (230-270 days) across both budget and premium listings in every city.
 
 
 ## Dashboard Preview
@@ -59,16 +66,16 @@ Listing availability does not meaningfully change with price — average days av
 *Findings above are drawn from the SQL analysis in `/sql/analysis.sql` and the interactive Power BI dashboard below. The dashboard includes a city filter and a price-tier filter on the map.*
 
 ![All cities view](./dashboard/screenshots/dashboard_all.png)
-*Default view — all three cities combined ($214.37 avg/night), showing listings concentrated in both the Dallas/Fort Worth metro and Austin.*
+*Default view all three cities combined ($214.37 avg/night) ... showing listings concentrated in both the Dallas/Fort Worth metro and Austin.*
 
 ![Austin view](./dashboard/screenshots/dashboard_austin.png)
-*Austin selected ($198.57 avg/night) — Premium and Upper Range listings are dense throughout central Austin, with very few Budget-tier (red) listings visible on the map.*
+*Austin selected ($198.57 avg/night) ... Premium and Upper Range listings are dense throughout central Austin, with very few Budget-tier (red) listings visible on the map.*
 
 ![Dallas view](./dashboard/screenshots/dashboard_dallas.png)
-*Dallas selected ($265.44 avg/night) — the highest-priced city overall, with Hotel Rooms ($200+) priced close to Entire Home/Apt listings, and almost no Budget-tier listings.*
+*Dallas selected ($265.44 avg/night) ... the highest-priced city overall, with Hotel Rooms ($200+) priced close to Entire Home/Apt listings, and almost no Budget-tier listings.*
 
 ![Fort Worth view](./dashboard/screenshots/dashboard_fort_worth.png)
-*Fort Worth selected ($141.27 avg/night) — the most affordable market, with a visibly higher share of Budget (red) and Mid Range (blue) listings compared to Austin and Dallas.*
+*Fort Worth selected ($141.27 avg/night) ... the most affordable market, with a visibly higher share of Budget (red) and Mid Range (blue) listings compared to Austin and Dallas.*
 
 ## What Drives Pricing the Most
 
